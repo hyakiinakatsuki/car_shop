@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { footerLinks } from "@/constants";
+import { constants } from "fs/promises";
 
 const Footer = () => {
 	return (
@@ -41,7 +42,7 @@ const Footer = () => {
 			<div className="flex justify-between items-center flex-wrap mt-10 border-t bordergray-100 sm:px-16 px-6 py-10">
 				<p>@2023 汽车之家 版权所有</p>
 				<div className="footer__copyrights-link">
-					<Link href="/" className="text-gray-500">
+					<Link href="/" className="text-gray-499">
 						隐私条款
 					</Link>
 					<Link href="/" className="text-gray-500">
