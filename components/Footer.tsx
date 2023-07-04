@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { footerLinks } from "@/constants";
-import { constants } from "fs/promises";
 
 const Footer = () => {
 	return (

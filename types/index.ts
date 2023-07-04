@@ -1,7 +1,7 @@
-import { MouseEventHandler } from "react";
+import { Dispatch, MouseEventHandler, SetStateAction } from "react";
 
 export interface CustomButtonProps {
-	title: String;
+	title: string;
 	containerStyles?: string;
 	handleClick?: MouseEventHandler<HTMLButtonElement>;
 	btnType?: "button" | "submit";
@@ -11,8 +11,8 @@ export interface CustomButtonProps {
 }
 
 export interface SearchManufacturerProps {
-	manufacturer: String;
-	setManufacturer: (manufacturer: String) => void;
+	selected: string;
+	setSelected: (manufacturer: string) => void;
 }
 
 export interface CarProps {
@@ -28,4 +28,34 @@ export interface CarProps {
 	model: string;
 	transmission: string;
 	year: number;
+}
+
+export interface FilterProps {
+	manufacturer: string;
+	year: number;
+	fuel: string;
+	limit: number;
+	model: string;
+}
+
+export interface OptionProps {
+	title: string;
+	value: string;
+}
+
+export interface CustomFilterProps {
+	title: string;
+	options: OptionProps[];
+	setFilter: React.Dispatch<React.SetStateAction<string | number>>;
+}
+
+export interface ShowMoreProps {
+	pageNumber: number;
+	isNext: boolean;
+	setLimit: (limit: number) => void;
+}
+
+export interface SearchBarProps {
+	setModel: (model: string) => void;
+	setManufacturer: (manufacturer: string) => void;
 }
